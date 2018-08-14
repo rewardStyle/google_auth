@@ -48,10 +48,7 @@ HOWEVER -- scopes can be passed into `get_credentials()` as a named argument
 for users who wish to specify different Scopes:
 
 ```python
-myScopes=' '.join(list(
-    ('foo', 'bar')
-))
-credentials = get_credentials('myUniqueAppName', scopes=myScopes)
+credentials = get_credentials('myUniqueAppName', scopes=('foo', 'bar'))
 ```
 
 ## The WHYs
