@@ -43,7 +43,9 @@ new credentials ( stored locally as `client_credentials.json` ).
 - Scopes are space separated
 - If modifying the module's scopes, delete the previously saved credentials at `client_credentials.json`
 
-## Why was this module developed?
+## The WHYs
+
+### Why was this module developed ?
 
 Authenticating ( and subsequently using ) Google services
 can be somewhat arcane, at least from within Python
@@ -51,6 +53,14 @@ applications.
 
 This module was developed to make authentication as
 simple as possible.
+
+### Why use OAuth2?
+( AKA, "Why not use simple token authentication?" )
+
+Using Google API keys are only usable for accessing _public_ resources in Google.
+Accessing _private_ resources ( Sheets, Docs, etc. ) requires OAuth2.
+
+**Important Note**: Authenticating via OAuth2 from scratch requires manual intervention the first time.
 
 ### Reference
 https://developers.google.com/sheets/api/quickstart/python
