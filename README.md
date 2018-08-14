@@ -43,6 +43,17 @@ new credentials ( stored locally as `client_credentials.json` ).
 - Scopes are space separated
 - If modifying the module's scopes, delete the previously saved credentials at `client_credentials.json`
 
+This module has default Scopes defined.
+HOWEVER -- scopes can be passed into `get_credentials()` as a named argument
+for users who wish to specify different Scopes:
+
+```python
+myScopes=' '.join(list(
+    ('foo', 'bar')
+))
+credentials = get_credentials('myUniqueAppName', scopes=myScopes)
+```
+
 ## The WHYs
 
 ### Why was this module developed ?
